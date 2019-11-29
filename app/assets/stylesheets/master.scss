@@ -1,1 +1,39 @@
 @import "bootstrap";
+
+body {
+  background: image_url('wild_oliva.png');
+}
+
+h1 {
+  color: #e62e00;
+}
+
+h2{
+  color: #595959;
+}
+
+.booyah-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #2a2a2a;
+  background: image_url('ignasi_pattern_s.png');
+  border: 1px solid #ccc;
+  border-color: #c2c0c0;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 20px;
+}
+
+.navbar {
+  background: image_url('ignasi_pattern_s.png');
+  box-shadow: 0px 1px 3px #2a2a2a;
+  color: #e62e00;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #e62e00;
+}
+
+.navbar-inverse .navbar-nav .nav-link {
+  color: #595959;
+}

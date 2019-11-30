@@ -1,17 +1,32 @@
 <div class="booyah-box col-10 offset-1">
   <h1 align="center">Cybin Caps</h1>
   <h2 align="center">Handmade Artisan Keycaps</h2>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
+
+ <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width: 650px; margin: 0 auto">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox" align="center">
+    <div class="carousel-item active">
+      <%= image_tag 'slider1.jpg', class: 'img-fluid' %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag 'slider2.jpg', class: 'img-fluid' %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag 'slider3.jpg', class: 'img-fluid' %>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
 </div> 

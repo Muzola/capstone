@@ -1,0 +1,32 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#flex-content-container {
+  flex: 1;
+}
+
+#footer {
+  position: relative;
+  width: 100%;
+  min-height: 75px;
+  background: image_url('ignasi_pattern_s.png');
+  padding: 10px 0px;
+  margin-top: 30px;
+  font-weight: 100;
+}
+
+#footer a {
+  color: black;
+  font-weight: 100;
+}
+
+.social a:hover {
+  text-decoration: none;
+}

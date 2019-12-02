@@ -28,5 +28,26 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+<br />
+<div class="row feature text-center">
+  <div class="col-3 col-sm">
+  </div>
 
+    <div class="col-3 col-sm">
+      <h3>Shop</h3>
+      <%= link_to shop_path do %>
+        <%= image_tag 'shop.png', class: 'img-fluid' %>
+      <% end %>
+    </div>
+    
+    <div class="col-3 col-sm">
+      <h3>About</h3>
+      <%= link_to about_path do %>
+        <%= image_tag 'logo.png', class: 'img-fluid' %>
+      <% end %>
+    </div>
+
+    <div class="col-3 col-sm">
+    </div>
+  </div>
 </div> 

@@ -1,0 +1,27 @@
+<div class="booyah-box col-10 offset-1">
+  <h1 align="center">shop</h1>
+  <% @products.each do |product| %> 
+  <br />
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <%= image_tag product.image.to_s, class: 'img-fluid' %><br/>
+          <%= product.title %><br/>
+          <%= product.cost.to_i %>
+        </div>
+        <div class="col-sm">
+          <%= image_tag product.image.to_s, class: 'img-fluid' %><br/>
+          <%= product.title %><br/>
+          <%= product.cost.to_i %>
+        </div>
+        <div class="col-sm">
+          <%= image_tag product.image.to_s, class: 'img-fluid' %><br/>
+          <%= product.title %><br/>
+          <%= product.cost.to_i %>
+        </div>
+      </div>
+    </div>
+
+    <br class="clr" />
+  <% end %>
+</div>

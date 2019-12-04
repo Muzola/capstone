@@ -1,0 +1,16 @@
+ <div class="booyah-box col-10 offset-1">
+  <% @products.each do |product| %>
+    <h2 class="text-center"><%= product.title %></h2>
+    <%= image_tag @product_image.to_s, class: 'img-fluid' %>
+    <br />
+    <div class="row">
+      <div class="col-sm-8 col-12">
+        <%= product.description %>
+      </div>
+      <div class="col-sm-4 col-12 text-center">
+        <%= link_to 'Button', '#', class: 'btn btn-primary btn-large' %>
+      </div>
+    </div>
+    <br class="clr" />
+  <% end %>
+</div>

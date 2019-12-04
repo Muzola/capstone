@@ -1,5 +1,17 @@
 <div class="booyah-box col-10 offset-1">
-  <h1>hello</h1>
-
-
+<h1 align="center">Shop</h1>
+<hr/>
+<br/>
+<div class="d-flex align-items-start">
+  
+    <% @products.each do |product| %>
+        <div class="col-sm-3">
+          <%= image_tag(product.image.to_s, class: 'list_image', size: '260x195') %><br/>
+          <%= product.title %> <br/>
+          <%= product.cost.to_i %> <br/>
+          <%= link_to 'Show', product %><br/>
+        </div>
+      
+    <% end %>   
+  </div>
 </div>

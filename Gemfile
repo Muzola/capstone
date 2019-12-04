@@ -72,3 +72,4 @@ end
 gem 'devise'
 gem "font-awesome-rails"
 gem 'simple_form'
+gem 'carrierwave', '~> 2.0'

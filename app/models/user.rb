@@ -10,4 +10,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
 has_many :products
+has_many :purchases
+has_many :purchased_products, through: :purchases, source: :product
+
+def purchased?(product)
+  return purchased_products.include?(product)
+end
+
 end

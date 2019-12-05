@@ -1,0 +1,26 @@
+<div class="booyah-box col-10 offset-1">
+      
+    
+    <br />
+    <div class="row">
+      
+      <div class="col-sm-6">
+        <%= image_tag @product.image.to_s, class: 'img-fluid', size: '720x540' %>
+      </div>
+
+      <div class="col-sm-6">
+        <h2><%= @product.title %></h2>
+        <h4><%= @product.description %></h4>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <h5>$ <%= @product.cost.to_i %></h5>
+
+        <% if current_user && current_user.purchased?(@product) %>
+          <h3 class="badge badge-info">only one-per-person!</h3>
+        <% else %>
+          <%= link_to 'Purchase', product_purchases_path(@product), class: 'btn btn-primary', method: :post %>
+        <% end %>
+      </div>
+      
+    </div>
+    <br class="clr" />
+</div>

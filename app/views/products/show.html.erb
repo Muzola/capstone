@@ -15,9 +15,9 @@
         <h5>$ <%= @product.cost.to_i %></h5>
 
         <% if current_user && current_user.purchased?(@product) %>
-          <h3 class="badge badge-info">only one-per-person!</h3>
+          <h3 class="badge badge-info">only one per-person!</h3>
         <% else %>
-          <%= link_to 'Purchase', product_purchases_path(@product), class: 'btn btn-primary', method: :post %>
+          <h6>only one per-person!</h6>
           <%= form_tag product_purchases_path(@product) do %>
           
           <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"

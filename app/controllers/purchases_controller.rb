@@ -19,7 +19,8 @@ class PurchasesController < ApplicationController
       description: 'Rails Stripe customer',
       currency: 'usd'
     )
-redirect_to product_path(current_product)
+    current_user.purchases.create(product: current_product)
+    redirect_to product_path(current_product)
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to root_path

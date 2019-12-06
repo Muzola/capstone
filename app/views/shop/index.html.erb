@@ -3,15 +3,18 @@
 <hr/>
 <br/>
 
-  
-<% @products.each do |product| %>
-<div class="container-fluid">
-    <div class="col-sm-4">
-      <%= image_tag(product.image.to_s, class: 'list_image', size: '260x195') %><br/>
-      <%= link_to product.title, product_path(product) %> <br/>
-      $<%= product.cost.to_i %> <br/>
-    </div>
-  </div>
-<% end %>   
  
-</div>
+    <% @products.reverse.in_groups_of(4, false).each do |group| %>
+      <div class="row">
+      <% group.each do |product| %>
+        
+          <div class="col-6 col-xl-3" align="center">
+            <%= image_tag(product.image.to_s, class: 'list_image', size: '260x195') %><br/>
+            <%= link_to product.title, product_path(product) %> <br/>
+            $<%= product.cost.to_i %> <br/>
+          </div>
+
+      <% end %>   
+     </div> 
+    <% end %>
+  </div>

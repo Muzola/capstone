@@ -22,6 +22,6 @@ end
   private 
 
   def product_params
-    params.require(:product).permit(:title, :description, :cost, :image)
+    params.require(:product).permit(:title, :description, :cost, :image, :stock)
   end
 end

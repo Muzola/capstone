@@ -1,7 +1,6 @@
 <div class="booyah-box col-10 offset-1">
       
-    
-    <br />
+        <br />
     <div class="row">
       
       <div class="col-sm-6">
@@ -11,9 +10,11 @@
       <div class="col-sm-6">
         <h2><%= @product.title %></h2>
         <h4><%= @product.description %></h4>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
         <h5>$ <%= @product.cost.to_i %></h5>
-        <h6> <%= @product.stock  %>/<%= @product.stock %> available</h6>
+         
+
+        <h6> <%= @product.stock %>/<%= @product.stock %> available</h6>
 
 
         <% if current_user && current_user.purchased?(@product) %>
@@ -27,7 +28,9 @@
                   data-email="<%= current_user.email %>"
 
                   data-description="<%= @product.title %> (<%= number_to_currency @product.cost %>)"
-                  data-amount="<%= (@product.cost * 100).to_i %>"
+                  
+
+                  data-amount="<%= (@product.cost * 100 + @product.shipping * 100).to_i %>"
                   data-locale="auto"></script>
         <% end %>
         <% end %>

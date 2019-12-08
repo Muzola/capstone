@@ -75,3 +75,4 @@ gem 'simple_form'
 gem 'carrierwave', '~> 2.0'
 gem 'stripe'
 gem "figaro"
+gem "fog-aws"

@@ -10,13 +10,14 @@ class PurchasesController < ApplicationController
 
     customer = Stripe::Customer.create(
       email: params[:stripeEmail],
-      source: params[:stripeToken]
+      source: params[:stripeToken],
+      address: params[current_user.address]
     )
 
     charge = Stripe::Charge.create(
       customer: customer.id,
       amount: @amount,
-      description: 'Rails Stripe customer',
+      description: 'Cybin Caps',
       currency: 'usd'
     )
     current_user.purchases.create(product: current_product)

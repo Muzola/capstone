@@ -1,9 +1,9 @@
 class PurchasesController < ApplicationController
   before_action :authenticate_user!
-
+   
   def create
     current_user.purchases.create(product: current_product)
-    
+   
 
        # Amount in cents
     @amount = (current_product.cost * 100).to_i

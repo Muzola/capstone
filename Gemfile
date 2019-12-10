@@ -77,3 +77,4 @@ gem 'carrierwave', '~> 2.0'
 gem 'stripe'
 gem "figaro"
 gem 'fog-aws'
+gem 'mime-types', '~> 3.1'

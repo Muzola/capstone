@@ -1,10 +1,9 @@
 class PurchasesController < ApplicationController
   before_action :authenticate_user!
-   
+
   def create
     current_user.purchases.create(product: current_product)
-   
-
+     
        # Amount in cents
     @amount = (current_product.cost * 100).to_i
 
@@ -20,7 +19,7 @@ class PurchasesController < ApplicationController
       description: 'Cybin Caps',
       currency: 'usd'
     )
-    current_user.purchases.create(product: current_product)
+    
     redirect_to product_path(current_product)
   rescue Stripe::CardError => e
     flash[:error] = e.message

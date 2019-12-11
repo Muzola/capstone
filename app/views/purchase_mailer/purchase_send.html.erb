@@ -1,5 +1,10 @@
-<h1>hello anthony you have a new order</h1>
-<h2>info </h2>
-<%= @purchase.user.address %>
-<%= @purchase.user.email %> 
-<%= @purchase.product.title %>
+<h1 align="center">New Order Info</h1>
+<hr />
+
+<h2>Buyer info</h2> <br />
+  <h3><%= @purchase.user.name %></h3><br />
+  <h3><%= @purchase.user.address %></h3><br />
+  <h3><%= @purchase.user.email %></h3><br />
+
+<h2>Product info</h2>
+  <h3><%= @purchase.product.title %></h3><br />

@@ -1,11 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe ProductsController, type: :controller do
-    describe "products#create" do
+RSpec.describe Product do
+    describe "products model" do
     it "should create a new product" do
-      post :create, params: {product: {title: "Fix things"}}
-      expect(response).to have_http_status(:success)
-      expect(Product.last.title).to eq("Fix things")
+      product = Product.create(:title => "Fix things")
+      
+      expect(product.title).to eq("Fix things")
     end
   end
 

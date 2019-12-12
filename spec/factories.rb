@@ -13,6 +13,8 @@ FactoryBot.define do
     cost {30}
     stock {2}
     association :user
+    shipping {8}
+    image {'img.jpg'}
   end
 
   factory :purchase_product do

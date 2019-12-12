@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe ProductsController do
 
-    describe "products#create action" do
-    it "should create a new product" do
+  describe "products#create action" do
+    it "should create a new product in the database" do
       user = FactoryBot.create(:user)
       sign_in user
       product = Product.create(:title => "New keycap")
@@ -11,8 +11,16 @@ RSpec.describe ProductsController do
     end
   end
 
+  describe "products#new action" do
+    it "should redirect after the user new product is made" do
+     get :new
+      expect(response).to redirect_to new_user_session_path 
+    end
+  end
+
+
   describe "products#show" do
-    it "should show the new item on its own page" do
+    it "should show the new product on its own page" do
       user = FactoryBot.create(:user)
       sign_in user
       product = FactoryBot.create(:product)
@@ -21,13 +29,4 @@ RSpec.describe ProductsController do
     end
   end
 
-  # describe "tasks#create" do
-  #   it "should allow new tasks to be created" do
-  #     post :create, params: {task: {title: "Fix things"}}
-  #     expect(response).to have_http_status(:success)
-  #     response_value = ActiveSupport::JSON.decode(@response.body)
-  #     expect(response_value['title']).to eq("Fix things")
-  #     expect(Task.last.title).to eq("Fix things")
-  #   end
-  # end
 end

@@ -1,23 +1,25 @@
 require 'rails_helper'
 
-RSpec.describe Product do
-    describe "products model" do
+RSpec.describe ProductsController do
+
+    describe "products#create action" do
     it "should create a new product" do
-      product = Product.create(:title => "Fix things")
-      
-      expect(product.title).to eq("Fix things")
+      user = FactoryBot.create(:user)
+      sign_in user
+      product = Product.create(:title => "New keycap")
+      expect(product.title).to eq("New keycap")
     end
   end
 
-  # describe "products#show" do
-  #   it "should allow tasks to be marked as done" do
-  #     task = FactoryBot.create(:task, done: false)
-  #     put :update, params: {id: task.id, task: { done: true }}
-  #     expect(response).to have_http_status(:success)
-  #     task.reload
-  #     expect(task.done).to eq(true)
-  #   end
-  # end
+  describe "products#show" do
+    it "should show the new item on its own page" do
+      user = FactoryBot.create(:user)
+      sign_in user
+      product = FactoryBot.create(:product)
+      get :show, params: { id: product.id }
+      expect(response).to have_http_status(:success)
+    end
+  end
 
   # describe "tasks#create" do
   #   it "should allow new tasks to be created" do

@@ -2,32 +2,16 @@
   <h1 align="center">Cybin Caps</h1>
   <h2 align="center">Handmade Artisan Keycaps</h2>
 
-<div class="container">
- <div class="col-sm" align="center">
-  <%= image_tag 'homepage.jpg', class: 'img-fluid', size: '700x700' %>
- </div>
+  <div class="container">
+   <div class="col-sm" align="center">
+    <%= image_tag 'homepage.jpg', class: 'img-fluid', size: '700x700' %>
+   </div>
+  </div>
+
+  <br />
+  <div class="row feature text-center">
+    <div class="col col-sm">
+      <%= link_to 'Head to the shop', shop_path, class: 'btn btn-danger btn-lg' %>   
+    </div>
+  </div>
 </div>
-
-<br />
-<div class="row feature text-center">
-  <div class="col-3 col-sm">
-  </div>
-
-    <div class="col-3 col-sm">
-      <h3>Shop</h3>
-      <%= link_to shop_path do %>
-        <%= image_tag 'shop.png', class: 'img-fluid' %>
-      <% end %>
-    </div>
-    
-    <div class="col-3 col-sm">
-      <h3>About</h3>
-      <%= link_to about_path do %>
-        <%= image_tag 'logo.png', class: 'img-fluid' %>
-      <% end %>
-    </div>
-
-    <div class="col-3 col-sm">
-    </div>
-  </div>
-</div> 
